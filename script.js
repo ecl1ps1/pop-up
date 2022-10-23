@@ -75,4 +75,5 @@ async function getResponse() {
        alert('Логин не верный');
     }
     popUpMenu.style.display = 'none'
+    body.style.background = 'white'
 }
