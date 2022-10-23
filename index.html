@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up window</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="js-body">
+    <div class="main-block">
+        <button onclick="openMenu()" class="pop-up-button">Открыть меню</button>
+    </div>
+    <div class="pop-up-menu">
+        <div id="close-menu" class="close-menu">
+            <img onclick="closeMenu()" class="close-button" src="./images/close.png" alt="" width="25px" height="25px">
+        </div>
+        <input class="login-input" type="text" name="input-login" placeholder="Логин">
+        <label for="input-login"></label>
+        <input class="password-input" type="password" name="input-password" placeholder="Пароль">
+        <label for="input-password"></label>
+        <button onclick="getResponse()" class="login-button">Войти</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
