@@ -9,28 +9,28 @@
 .pop-up-menu {
     width: 200px;
     height: 160px;
-    background-color: bisque;
-    padding: 60px 30px;
+    background-color: rgb(9, 9, 9);
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-top: 30px;
+    padding-bottom: 40px;
     border-radius: 20px;
 }
 .close-menu {
-    background-color: rgb(146, 131, 131);
+    background-color: rgb(255, 255, 255);
     width: 240px;
     position: relative;
-    right: 30px;
-    bottom: 60px;
+    right: 20px;
+    bottom: 30px;
     text-align: end;
     border-radius: 20px;
     padding-right: 20px;
     cursor: pointer;
+    margin-bottom: -30px;
 }
 input {
     border-radius: 15px;
     border: 2px solid black;
-}
-input::placeholder {
-    position: relative;
-    left: 10px;
 }
 img {
     cursor: pointer;
@@ -54,15 +54,19 @@ body {
     border: 2px solid black;
     padding: 2px 20px;
     margin-top: 30px;
-    margin-left: 50px;
+    margin-left: 65px;
     transition: all 0.3s ease;
 }
 .login-button:hover {
-    opacity: 0.7
+    opacity: 0.9;
 }
 img {
     z-index: 1000;
     position: relative;
-    bottom: 90px;
-    left: 190px;
+    bottom: 30px;
+    left: 200px;
+}
+input {
+    padding-left: 23px;
+    padding-bottom: 2px;
 }
