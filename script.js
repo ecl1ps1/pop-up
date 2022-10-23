@@ -7,6 +7,28 @@ const closeButton = document.querySelector('.close-button'),
       passwordInput = document.querySelector('.password-input')
 const closer = false
 
+popUpMenu.onmousedown = function(event) {
+    popUpMenu.style.position = 'absolute';
+    popUpMenu.style.zIndex = 1000;
+    document.body.append(popUpMenu);
+    moveAt(event.pageX, event.pageY);
+    function moveAt(pageX, pageY) {
+        popUpMenu.style.left = pageX - popUpMenu.offsetWidth / 10 + 'px';
+        popUpMenu.style.top = pageY - popUpMenu.offsetHeight / 10 + 'px';
+    }
+    function onMouseMove(event) {
+      moveAt(event.pageX, event.pageY);
+    }
+    document.addEventListener('mousemove', onMouseMove);
+    popUpMenu.onmouseup = function() {
+      document.removeEventListener('mousemove', onMouseMove);
+      popUpMenu.onmouseup = null;
+    };
+  };
+  popUpMenu.ondragstart = function() {
+    return false;
+  };
+
 if(closer==false) {
     popUpMenu.style.display = 'none'
 } else {
@@ -21,11 +43,10 @@ function openMenu() {
     body.style.background ='rgb(192, 192, 192)'
 }
 
-popUpMenu.addEventListener('dragend', function(event) {
+closeMenus.addEventListener('dragend', function(event) {
     console.log(event.pageX, event.pageY);
     popUpMenu.style.position = 'absolute'
-    popUpMenu.style.top = event.pageY + 'px'
-    popUpMenu.style.left = event.pageX +'px'
+
 }) 
 
 body.addEventListener('dragover', function(event) {
